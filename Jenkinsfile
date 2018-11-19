@@ -17,7 +17,7 @@ pipeline {
               echo 'Start the check of playbooks '
               script {
 
-                if ( checkFolderForDiffs("roles/local_docker_hadoop")){
+                if ( checkFolderForDiffs("ansible/roles/local_docker")){
                   echo 'I only execute on the master branch'
                 } else {
                   echo 'I execute elsewhere'
@@ -31,7 +31,7 @@ pipeline {
               echo 'Start deploying playbook'
               script {
 
-                if ( checkFolderForDiffs("roles/local_docker_hadoop")){
+                if ( checkFolderForDiffs("ansible/roles/local_docker")){
                   echo 'I only execute on the master branch'
                 } else {
                   echo 'I execute elsewhere'
