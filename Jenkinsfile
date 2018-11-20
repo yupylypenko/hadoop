@@ -18,7 +18,14 @@ pipeline {
               script {
 
                 if ( checkFolderForDiffs("ansible/roles/local_docker")||checkFolderForDiffs("ansible/playbooks/local_docker_cluster.yml")){
-                  echo 'I only execute on the master branch'
+                  ansiblePlaybook(
+                    //credentialsId: '4908ee95-1fbb-45d0-b1b6-0f45cd7f5160',
+                    inventory: 'inventory/docker/hosts-inventory',
+                    playbook: 'playbooks/local_docker_cluster.yml',
+                    extras: '--check',
+                    colorized: true,
+                    //tags: 'ditto_dags'
+                 )
                 } else {
                   echo 'I execute elsewhere'
                 }
@@ -32,7 +39,13 @@ pipeline {
               script {
 
                 if ( checkFolderForDiffs("ansible/roles/local_docker")||checkFolderForDiffs("ansible/playbooks/local_docker_cluster.yml")){
-                  echo 'I only execute on the master branch'
+                  ansiblePlaybook(
+                    //credentialsId: '4908ee95-1fbb-45d0-b1b6-0f45cd7f5160',
+                    inventory: 'inventory/docker/hosts-inventory',
+                    playbook: 'playbooks/local_docker_cluster.yml',
+                    colorized: true,
+                    //tags: 'ditto_dags'
+                 )
                 } else {
                   echo 'I execute elsewhere'
                 }
