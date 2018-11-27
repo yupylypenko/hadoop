@@ -42,7 +42,7 @@ pipeline {
                   ansiblePlaybook(
                     //credentialsId: '4908ee95-1fbb-45d0-b1b6-0f45cd7f5160',
                     inventory: 'inventory/docker/hosts-inventory',
-                    playbook: 'playbooks/local_docker_cluster.yml',
+                    playbook: 'playbooks/local/local_docker_cluster.yml',
                     colorized: true,
                     //tags: 'ditto_dags'
                  )

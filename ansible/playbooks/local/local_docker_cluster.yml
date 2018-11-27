@@ -1,0 +1,20 @@
+---
+#Run local hadoop cluster
+- name: Run using a project directory
+  hosts: docker_group
+  gather_facts: false
+  become: true
+
+  roles:
+  - role: local_docker
+  #connection: local
+#  gather_facts: no
+#  tasks:
+#  - include_role:
+#      name: local_docker
+    #register: output
+
+    #- debug:
+    #  var: output
+
+#

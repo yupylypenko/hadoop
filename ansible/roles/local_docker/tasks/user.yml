@@ -1,0 +1,18 @@
+---
+
+# Create hadoop grup
+- name: Create hadoop  group
+  group:
+    name: "{{ hadoop_group }}"
+    gid: "{{ hadoop_group_id }}"
+
+# Create hadoop user and home
+- name: Create hadoop  user
+  user:
+    name: "{{ hadoop_user }}"
+    group: "{{ hadoop_group }}"
+    home: "{{ hadoop_home }}"
+    uid: "{{ hadoop_user_uid }}"
+    shell: "/bin/bash"
+    comment: "hadoop user"
+    createhome: yes
