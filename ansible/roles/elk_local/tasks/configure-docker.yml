@@ -1,0 +1,10 @@
+---
+# Create directories for docker-compose
+- name: Create directory for docker-compose
+  file:
+    path: "{{ item }}"
+    state: "directory"
+    mode: 0775
+  with_items:
+    - "{{ elk_docker_dir }}"
+  #notify: Restart containers

@@ -1,0 +1,12 @@
+---
+#- name: Check Ansible version
+#  command: ansible --version
+#  register: ansibleVersion
+
+#- name: Print version
+#  debug:
+#    msg: "Ansible Version: {{ ansibleVersion.stdout }}"
+
+- import_tasks: tasks.yml
+  tags:
+    - docker_elk_local

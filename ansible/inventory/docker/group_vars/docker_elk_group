@@ -1,0 +1,6 @@
+---
+elk_group: elk
+elk_group_id: 1011
+elk_user: elk
+elk_home: "/home/elk"
+elk_user_uid: 1011

@@ -1,0 +1,7 @@
+---
+# Install .bash_profile
+- name: Install ELK .bash_profile
+  template:
+    src: "bash_profile.j2"
+    dest: "{{ elk_home }}/.bash_profile"
+#  notify: Restart containers

@@ -1,0 +1,19 @@
+---
+
+# Remove docker-py because it have dependency conflict
+- name: Remove docker-py
+  pip:
+    name: docker-py
+    state: absent
+
+# Install specific version of docker python module
+- name: Install docker python module
+  pip:
+    name: docker
+    version: 2.7.0
+
+# Install docker-compose pip module, required for ansible_service on remote host
+- name: Install docker-compose python module
+  pip:
+    name: docker-compose
+    version: 1.19.0

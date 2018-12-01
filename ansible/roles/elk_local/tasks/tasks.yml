@@ -1,0 +1,16 @@
+---
+- import_tasks: user.yml
+  tags:
+    - user
+
+- import_tasks: configure.yml
+  tags:
+    - configure
+
+- import_tasks: configure-docker.yml
+  tags:
+    - configure-docker
+
+- import_tasks: install.yml
+  tags:
+    - install

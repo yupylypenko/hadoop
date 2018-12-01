@@ -1,0 +1,3 @@
+---
+#Default variables for ELK installation
+elk_docker_dir: "{{ elk_home }}/docker"

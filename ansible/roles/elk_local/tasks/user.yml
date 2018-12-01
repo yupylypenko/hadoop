@@ -1,0 +1,18 @@
+---
+
+# Create elk grup
+- name: Create elk  group
+  group:
+    name: "{{ elk_group }}"
+    gid: "{{ elk_group_id }}"
+
+# Create elk user and home
+- name: Create elk  user
+  user:
+    name: "{{ elk_user }}"
+    group: "{{ elk_group }}"
+    home: "{{ elk_home }}"
+    uid: "{{ elk_user_uid }}"
+    shell: "/bin/bash"
+    comment: "elk user"
+    createhome: yes

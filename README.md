@@ -5,3 +5,6 @@ ypylypenko@ypylypenko-VirtualBox:~/_LOCLA_GIT_/hadoop_local/ansible$ pwd
 /home/ypylypenko/_LOCLA_GIT_/hadoop_local/ansible
 
 ansible-playbook -i ./inventory/docker/hosts-inventory playbooks/local/local_docker_cluster.yml
+
+#For ELK deployment on docker start
+ansible-playbook -i ./inventory/docker/hosts-inventory playbooks/local/local_docker_cluster.yml -C(dry test of playbook)
